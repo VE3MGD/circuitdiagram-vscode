@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  circuit-diagram.org component file for a 15A 120V North American Receptacle (NEMA 5-15R).
+  To use, save this code as an .xml file and import it into circuit-diagram.org.
+-->
+<component name="15A 120V Receptacle" type="Misc" color="#000000">
+  <description>Standard North American 15A 120V receptacle (NEMA 5-15R) with Hot, Neutral, and Ground pins.</description>
+
+  <!-- Defines the connection points of the component -->
+  <pins>
+    <!-- Hot (Line) pin - smaller vertical slot -->
+    <pin name="L" x="12" y="0" side="right"/>
+    <!-- Neutral pin - larger vertical slot -->
+    <pin name="N" x="-12" y="0" side="left"/>
+    <!-- Ground pin - circular/D-shaped hole -->
+    <pin name="G" x="0" y="15" side="bottom"/>
+  </pins>
+
+  <!-- Defines the visual representation of the component -->
+  <schematic>
+    <!-- A bounding box for the schematic symbol -->
+    <path d="M-15,-15 L15,-15 L15,15 L-15,15 Z" style="stroke: none; fill: none;"/>
+
+    <!-- Neutral slot (larger vertical line) -->
+    <path d="M-10,-5 L-10,5" style="stroke: #000000; stroke-width: 2; fill: none;"/>
+    <!-- Hot slot (smaller vertical line) -->
+    <path d="M10,-3 L10,3" style="stroke: #000000; stroke-width: 2; fill: none;"/>
+    <!-- Ground hole (half-circle) -->
+    <path d="M-4,12 A 4,4 0 0 1 4,12" style="stroke: #000000; stroke-width: 2; fill: none;"/>
+
+    <!-- Labels for the pins -->
+    <text x="12" y="-5" style="text-anchor: middle;">L</text>
+    <text x="-12" y="-5" style="text-anchor: middle;">N</text>
+    <text x="-5" y="15" style="text-anchor: start;">G</text>
+  </schematic>
+
+  <!-- Placeholder for the PCB layout, if needed -->
+  <pcb>
+    <circle cx="0" cy="0" r="15" style="stroke: #000000; stroke-width: 1; fill: none;"/>
+  </pcb>
+</component>
